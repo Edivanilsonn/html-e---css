@@ -6,8 +6,9 @@
     <title>media </title>
     <link rel="stylesheet" href="stilos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="stilos/media-query.css">
 </head>
-<body>
+<body onresize="Mudoutamanho()">
     <header>
         <h1> meu site </h1>
        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
@@ -33,6 +34,22 @@
         </article>
     </main>
     <script>
+
+        function Mudoutamanho(){
+            if(window.innerWidth >= 600) {
+                itens.style.display = 'block'
+
+            } else {
+                itens.style.display = 'none'
+            }
+           
+        
+
+        }
+
+
+
+
         function clickMenu(){
             if(itens.style.display == 'block'){
                 itens.style.display = 'none'
